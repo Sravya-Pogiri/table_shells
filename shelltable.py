@@ -31,6 +31,20 @@ def extract_text_from_docx(file_path):
         print(f"Error extracting text from DOCX: {e}")
         return None
     
+def extract_text_from_pdf(file_path):
+    """Extracts text from a pdf file."""
+    text = "" 
+    try:
+        # pdf = pdf.Document(file_path)
+        text = partition_pdf(file_path)
+        return text
+    except FileNotFoundError:
+        print(f"Error: pdf file not found at {file_path}")
+        return None
+    except Exception as e:
+        print(f"Error extracting text from pdf: {e}")
+        return None
+
 def read_document_content(file_path):
     """
     Reads text from a PDF or DOCX file based on its extension.
@@ -38,13 +52,16 @@ def read_document_content(file_path):
     """
     if file_path.lower().endswith('.docx'):   #.docx
         return extract_text_from_docx(file_path)
+    elif file_path.lower().endswith('pdf'):
+        return extract_text_from_pdf(file_path)
     else:
         print("Unsupported file format. Please provide a .pdf or .docx file.")
         return None
     
 Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5")
-Settings.llm = Ollama(model="llama3.1", request_timeout=1000.0)
+Settings.llm = Ollama(model="llama3.1", request_timeout=300.0)
 
+@contextmanager
 def timeout_context(seconds):
     """Context manager for timeout handling"""
     def timeout_handler(signum, frame):
@@ -60,7 +77,7 @@ def timeout_context(seconds):
 
 if __name__ == '__main__':
     base_directory_path = "/Users/arnav/Documents/Python Projects/IDSWG_TableShells/table_shells"
-    file_name = "Table_shell_standard.docx" # Make sure this matches your file
+    file_name = "Table_shell_standards.pdf" # Make sure this matches your file
 
     file_path = os.path.join(base_directory_path, file_name)
 
@@ -133,17 +150,21 @@ Query: {query_str}
             print(f"--- Query {i+1}: {query_text} ---")
             
             try:
-                response = query_engine.query(query_text)
-                llm_response_text = response.response
-                
-                print("LLM Response (attempted JSON):")
-                try:
-                    parsed_json = json.loads(llm_response_text)
-                    print(json.dumps(parsed_json, indent=2))
-                except json.JSONDecodeError:
-                    print("Could not parse as JSON. Raw response:")
-                    print(llm_response_text)
+                # Add timeout for the query operation
+                with timeout_context(300):  # 300 second timeout
+                    response = query_engine.query(query_text)
+                    llm_response_text = response.response
                     
+                    print("LLM Response (attempted JSON):")
+                    try:
+                        parsed_json = json.loads(llm_response_text)
+                        print(json.dumps(parsed_json, indent=2))
+                    except json.JSONDecodeError:
+                        print("Could not parse as JSON. Raw response:")
+                        print(llm_response_text)
+                        
+            except TimeoutError as e:
+                print(f"Query {i+1} timed out: {e}")
             except Exception as e:
                 print(f"Error during query {i+1}: {e}")
             print("------------------------------------------\n")
