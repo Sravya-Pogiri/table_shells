@@ -79,3 +79,5 @@ while True:
     results = analyzeLLM(pdf_chunks, question)
     for answer in results: 
         print(answer)
+
+
