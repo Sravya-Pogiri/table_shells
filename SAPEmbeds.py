@@ -72,6 +72,7 @@ def process_pdf(file_path: str, chunk_length: int = 300, chunk_overlap: int = 80
 
 pdf_chunks = process_pdf("./SAP.pdf", chunk_length=300, chunk_overlap=80)
 while True:
+    demo_question = "What are the variables in the demographics section of the pdf file and clasiffy them as numerical or categorical"
     question = input("Please enter your question (press q to quit): ")
     if question == 'q':
         break 
