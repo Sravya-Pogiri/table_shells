@@ -1,0 +1,2282 @@
+[
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Characteristics",
+    "":"",
+    "_1":"Treatment A (N=XXX\u200b)",
+    "_2":"Treatment B (N=xxxx)",
+    "_3":"Total (N=xxxx)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Ethnicity [for US studies only]",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Hispanic\/Latino",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Non-Hispanic\/Non-Latino",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Unknown",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Height (cm)",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"n",
+    "_1":"XX",
+    "_2":"XX",
+    "_3":"XX",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Mean",
+    "_1":"Xxx.xx",
+    "_2":"Xxx.xx",
+    "_3":"Xxx.xx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Standard Deviation",
+    "_1":"Xxx.xxX",
+    "_2":"Xxx.xxX",
+    "_3":"Xxx.xxX",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Median",
+    "_1":"Xxx.xx",
+    "_2":"Xxx.xx",
+    "_3":"Xxx.xx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Min, Max",
+    "_1":"xxx, xxx",
+    "_2":"XXX,XXX",
+    "_3":"XXX,XXX",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Weight (kg)",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"n",
+    "_1":"XX",
+    "_2":"XX",
+    "_3":"XX",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Mean",
+    "_1":"Xxx.xx",
+    "_2":"Xxx.xx",
+    "_3":"Xxx.xx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Standard Deviation",
+    "_1":"Xxx.xxX",
+    "_2":"Xxx.xxX",
+    "_3":"Xxx.xxX",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Median",
+    "_1":"Xxx.xx\u200b",
+    "_2":"Xxx.xx\u200b",
+    "_3":"Xxx.xx\u200b",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Min, Max",
+    "_1":"XXX,XXX",
+    "_2":"XXX,XXX",
+    "_3":"xxx, xxx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Body Mass Index (kg\/m2)",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"n",
+    "_1":"XX",
+    "_2":"XX",
+    "_3":"XX",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Mean",
+    "_1":"Xxx.xx",
+    "_2":"Xxx.xx",
+    "_3":"Xxx.xx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Standard Deviation",
+    "_1":"Xxx.xxX",
+    "_2":"Xxx.xxX",
+    "_3":"Xxx.xxX",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Median",
+    "_1":"Xxx.xx",
+    "_2":"Xxx.xx",
+    "_3":"Xxx.xx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Min, Max",
+    "_1":"xxx, xxx",
+    "_2":"xxx, xxx",
+    "_3":"xxx, xxx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Body Surface Area (m2)",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"n",
+    "_1":"XX",
+    "_2":"XX",
+    "_3":"XX",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Mean",
+    "_1":"Xxx.xx",
+    "_2":"Xxx.xx",
+    "_3":"Xxx.xx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Standard Deviation",
+    "_1":"Xxx.xxX",
+    "_2":"Xxx.xxX",
+    "_3":"Xxx.xxX",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Median",
+    "_1":"Xxx.xx",
+    "_2":"Xxx.xx",
+    "_3":"Xxx.xx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Min, Max",
+    "_1":"xxx, xxx",
+    "_2":"xxx, xxx",
+    "_3":"xxx, xxx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Stratification Factor 1 (EDC)",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Level 1",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Level 2",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Stratification Factor 1 (LXRS)",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Level 1",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Level 2",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"ECOG Performance Status",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"0- Fully Active",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"1 - Restricted in Physically Strenuous Activity",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"2 - Ambulatory and Capable of All Self-Care",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"3- Capable of only limited self-care",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"4-Completely disabled",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"12-Lead ECG",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Normal",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Abnormal, Not Clinically Significant",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Clinically significant findings",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Not Performed",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Baseline\/Biomarker Subgroups",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Category 1",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Category 2",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Smoking Status",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Never",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Former",
+    "_1":"xx(xx.x)\u200b",
+    "_2":"xx(xx.x)\u200b",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Current",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Bone marrow\/aspirate blast count at baseline",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Mean",
+    "_1":"xx.x",
+    "_2":"xx.x",
+    "_3":"xx.x",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Median",
+    "_1":"xx.x",
+    "_2":"xx.x",
+    "_3":"xx.x",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"n",
+    "_1":"xx.xx",
+    "_2":"xx.xx",
+    "_3":"xx.xx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Standard Deviation",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Min, Max",
+    "_1":"xx.x,xx.x",
+    "_2":"xx.x,xx.x",
+    "_3":"xx.x,xx.x",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":">=Median",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Region\/Country of Enrollment",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"North America",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Country 1",
+    "_1":"xx(xx.x)\u200b",
+    "_2":"xx(xx.x)\u200b",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Asia",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Country 1",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Europe (required to list all countries)",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Country 1",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Country 2",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)\u200b",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Country n",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Rest of World",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Country 1",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Country 2",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Country n",
+    "_1":"xx(xx.x)",
+    "_2":"xx(xx.x)",
+    "_3":"xx(xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Notes: The baseline value is defined as the last non-missing value before initial administration of study drug. [a] Age in years is calculated using the date of birth and date of informed consent. Source Data: adam.adsl; Listing 16.2.4.",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Table 14.1.3.1: Prior [xxxxx] Cancer History [for Solid Tumor] Full Analysis Set",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Parameter",
+    "":"",
+    "_1":"Treatment A (N=xxx)",
+    "_2":"Treatment B (N=xxx)",
+    "_3":"Total (N=xxx)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Time from Initial Histologic Diagnosis to Randomization (days)",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"n",
+    "_1":"xx",
+    "_2":"xx",
+    "_3":"xx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Mean",
+    "_1":"xxx.x",
+    "_2":"xxx.x",
+    "_3":"xxx.x",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Standard Deviation",
+    "_1":"xxx.xx",
+    "_2":"xxx.xx",
+    "_3":"xxx.xx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Median",
+    "_1":"xxx.x",
+    "_2":"xxx.x",
+    "_3":"xxx.x",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Min, Max",
+    "_1":"xxx, xxx",
+    "_2":"xxx, xxx",
+    "_3":"xxx, xxx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Histology",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Adenocarcinoma",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Squamous",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Large Cell",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Not Done",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Other",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Tumor Stage at Initial Diagnosis",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"0",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"I",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IA",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IB",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"II",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IIA",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IIB",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"III",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IIIA",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IIIB",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IIIC",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IV",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IVA",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IVB",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Unknown",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Tumor Stage at Study Entry",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"0",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"I",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IA",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IB",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"II",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IIA",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IIB",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"III",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IIIA",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IIIB",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IIIC",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IV",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IVA",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"IVB",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"TNM Stage at Study Entry (T)",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"TX",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"T0",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Tis",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"T1",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"T1a",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"T1b",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"T2",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"T3",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"T4",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"T4a",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"T4b",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"TNM Stage at Study Entry (N)",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"NX",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"N0",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"N1",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"N2",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"N3",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"N3a",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"N3b",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"TNM Stage at Study Entry (M)",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"M0",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"M1",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Histologic Grade",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Well Differentiated",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Moderately Differentiated",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Poorly Differentiated",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Undifferentiated",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Unknown",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"History of Brain Metastasis",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Yes",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"No",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"History of Other Metastasis",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Yes",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"No",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Location of Metastasis [in a descending # order]",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"CNS (brain)",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Bone",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Adrenal Glands",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Lung",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Liver",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Pericardium",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Kidneys",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Other",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Source Data: adam.adsl; Listing16.2.x.x.x. [The shell below uses lung cancer as an example, for breast cancer, gastric cancer, etc., refer to study CRFs for modification]",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Table 14.1.3.2: Prior Cancer Therapy [for Solid Tumor] Full Analysis Set",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Parameter",
+    "":"",
+    "_1":"Treatment A (N=xxx)",
+    "_2":"Treatment B (N=xxx)",
+    "_3":"Total (N=xxx)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Any Prior Systemic Cancer Therapy",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Class 1",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Subclass 1",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Drug 1",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Drug 2",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Lines of Prior Systemic Cancer Therapy for Relapsed or Metastatic Disease",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"1",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"2",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"3",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"4+",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Number of Regimens of Prior Systemic Cancer Therapy",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"1",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"2",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"3",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"4+",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Number of Prior Cancer Chemotherapy",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"n",
+    "_1":"xx",
+    "_2":"xx",
+    "_3":"xx",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Mean",
+    "_1":"xx.x",
+    "_2":"xx.x",
+    "_3":"xx.x",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Median",
+    "_1":"xx.x",
+    "_2":"xx.x",
+    "_3":"xx.x",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Min, Max",
+    "_1":"xx.x",
+    "_2":"xx.x",
+    "_3":"xx.x",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Intent of Prior Cancer Chemotherapy Regimens",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Neo-Adjuvant",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Local Advanced",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Metastatic",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Preventive",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Maintenance",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Other",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Best Response to [Prior or Most Recent] Therapy",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Complete Response (CR)",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Partial Response (PR)",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Stable Disease (SD)",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Progressive Disease (PD)",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Unknown (UNK)",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Not Applicable (NA)",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Reason for Discontinuation of Prior Therapy",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Disease Progression",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Adverse Event",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Completed Therapy",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Investigator Decision",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Cost",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Patient Choice",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Regimen Availability",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Unknown",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Other",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Prior Radiation Therapy",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Yes",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"No",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Missing",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Type of Prior Radiation Therapy",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Cranial",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Stereotactic",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"General",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"Other",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Prior Cancer Surgery",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Yes",
+    "":"",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"No",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Prior Cancer Biopsy",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Yes",
+    "":"",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"No",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Subjects with any prior anti-cancer therapy n (%)",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Agent Name 1",
+    "":"",
+    "_1":"xx (xx.x)",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Agent Name 2",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Note: If a subject had more than one agent within the same regimen, the subject was counted at each relevant agent. ",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Source Data: adam.adsl; Listing 16.2.x.x.",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Table 14.1.3.3: Medical History Full \/Safety Analysis Set",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"System Organ Class",
+    "":"",
+    "_1":"Preferred Term",
+    "_2":"Treatment A (N=xxx) n (%)",
+    "_3":"Treatment B (N=xxx) n (%)",
+    "_4":"Total (N=xxx) n (%)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"Subjects with any Report",
+    "":"",
+    "_1":"",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"System Organ Class 1",
+    "":"",
+    "_1":"",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"Preferred Term 1",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"Preferred Term 2",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"Preferred Term n",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"System Organ Class 2",
+    "":"",
+    "_1":"",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"Preferred Term 1",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"Preferred Term 2",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"Preferred Term n",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"",
+    "_2":"",
+    "_3":"",
+    "_4":""
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"System Organ Class n",
+    "":"",
+    "_1":"",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"Preferred Term 1",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"Preferred Term 2",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  },
+  {
+    "Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set":"",
+    "":"",
+    "_1":"Preferred Term n",
+    "_2":"xx (xx.x)",
+    "_3":"xx (xx.x)",
+    "_4":"xx (xx.x)"
+  }
+]
