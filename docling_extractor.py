@@ -167,7 +167,7 @@ def read_document_with_docling_combined_tables(file_path, combine_tables_flag=Tr
         pipeline_options.do_table_structure = True
         pipeline_options.table_structure_options.do_cell_matching = True
         # Optionally, try ACCURATE mode for better table structure recognition
-        # pipeline_options.table_structure_options.mode = TableFormerMode.ACCURATE
+        pipeline_options.table_structure_options.mode = TableFormerMode.ACCURATE
 
         doc_converter = DocumentConverter(
             format_options={
