@@ -5,6 +5,10 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.core import Settings
 from llama_index.core import VectorStoreIndex, Document
 
+# New imports for persistence
+from llama_index.core import StorageContext, load_index_from_storage
+
+# Already existing imports
 from llama_index.core.retrievers import VectorIndexRetriever
 from llama_index.core.query_engine import RetrieverQueryEngine
 from llama_index.core.node_parser import SentenceSplitter # Corrected import path
@@ -15,7 +19,7 @@ try:
     from docling.datamodel.base_models import InputFormat
     from docling.datamodel.pipeline_options import PdfPipelineOptions
     from docling.document_converter import PdfFormatOption
-    from docling.datamodel.pipeline_options import TableFormerMode # You might need to check your Docling version for this.
+    from docling.datamodel.pipeline_options import TableFormerMode
 except ImportError as e:
     print(f"Error importing Docling components: {e}")
     print("Please install Docling using one of these methods:")
@@ -25,7 +29,7 @@ except ImportError as e:
     print("\nFor more information, visit: https://docling-project.github.io/docling/installation/")
     exit()
 
-# --- LlamaIndex Import (keep as is) ---
+# --- LlamaIndex Document Import (keep as is) ---
 try:
     from llama_index.core import Document
 except ImportError:
@@ -511,59 +515,13 @@ def export_combined_tables_directly(file_path, output_dir="./table_exports", com
         print(f"❌ Error processing document: {e}")
         return []
 
-# --- LlamaIndex Settings (as you have them) ---
+
+# --- LlamaIndex Settings ---
 Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5")
 Settings.llm = Ollama(model="mistral", request_timeout=1000.0, format="json")
 
-# Usage example:
-# if __name__ == "__main__":
-#     file_path = "/Users/Sravya/Desktop/AI_model_table_shells/mark - can you convert this into a markdown.csv"
-
-#     print("\n--- Exporting combined tables directly ---")
-#     tables = export_combined_tables_directly(
-#         file_path, 
-#         combine_tables_flag=True, 
-#         similarity_threshold=0.7
-#     )
-
-#     print("\n--- Reading document with combined tables for LlamaIndex ---")
-#     llama_documents = read_document_with_docling_combined_tables(
-#         file_path, 
-#         combine_tables_flag=True, 
-#         similarity_threshold=0.7
-#     )
-#     if llama_documents:
-#         print(f"Successfully created {len(llama_documents)} LlamaIndex documents.")
-
-#         # --- THIS IS THE CRUCIAL STEP TO VECTORIZE THE DATA ---
-#         print("\n--- Creating VectorStoreIndex (Vectorizing Data) ---")
-#         try:
-#             # This line takes all your prepared LlamaIndex Document objects
-#             # and automatically performs the following:
-#             # 1. Chunks them (if not already sufficiently chunked, though your
-#             #    Docling processing largely handles this for tables).
-#             # 2. Generates embeddings for each chunk (node) using Settings.embed_model.
-#             # 3. Stores these embeddings in an in-memory vector store by default.
-#             index = VectorStoreIndex.from_documents(llama_documents, show_progress=True)
-#             print("VectorStoreIndex created successfully! Data vectorized.")
-
-#             # You can now use this index for querying
-#             query_engine = index.as_query_engine()
-#             print("\n--- Example Query ---")
-#             response = query_engine.query("What is the data about in the tables?")
-#             print(f"Response: {response}")
-
-#             # You can also query specific table information if you tailor your queries
-#             response_table_2_csv = query_engine.query("Show me the data for Combined Table 2 in CSV format.")
-#             print(f"\nResponse for Combined Table 2 (CSV):\n{response_table_2_csv}")
-
-#         except Exception as e:
-#             print(f"Error creating VectorStoreIndex or querying: {e}")
-#             print("Ensure your embedding model and LLM are correctly configured and accessible.")
-#     else:
-#         print("No LlamaIndex documents were created, so no indexing/vectorization can occur.")
-
-# ... (your existing code) ...
+# Define the directory for storing the index
+PERSIST_DIR = "./llama_index_storage"
 
 if __name__ == "__main__":
     file_path = "/Users/Sravya/Desktop/AI_model_table_shells/mark - can you convert this into a markdown.csv"
@@ -575,31 +533,62 @@ if __name__ == "__main__":
         similarity_threshold=0.7
     )
 
-    print("\n--- Reading document with combined tables for LlamaIndex ---")
-    llama_documents = read_document_with_docling_combined_tables(
-        file_path,
-        combine_tables_flag=True,
-        similarity_threshold=0.7
-    )
-    if llama_documents:
-        print(f"Successfully created {len(llama_documents)} LlamaIndex documents.")
-
-        print("\n--- Creating VectorStoreIndex (Vectorizing Data) ---")
-        try:
-            index = VectorStoreIndex.from_documents(llama_documents, show_progress=True)
-            print("VectorStoreIndex created successfully! Data vectorized.")
-
-            query_engine = index.as_query_engine()
-
-            print("\n--- Querying for table content ---")
-
-            # Query 1: Asking for a table by general description
-            response1 = query_engine.query("Provide the Height (cm) section from Table 14.1.2.1 in markdown format.")
-            print(f"\nResponse to 'What are the key figures from the main financial table?':\n{response1}")
-
-
-        except Exception as e:
-            print(f"Error creating VectorStoreIndex or querying: {e}")
-            print("Ensure your embedding model and LLM are correctly configured and accessible.")
+    index = None
+    if not os.path.exists(PERSIST_DIR):
+        print(f"\n--- Persistence directory '{PERSIST_DIR}' not found. Creating and vectorizing data. ---")
+        print("\n--- Reading document with combined tables for LlamaIndex ---")
+        llama_documents = read_document_with_docling_combined_tables(
+            file_path,
+            combine_tables_flag=True,
+            similarity_threshold=0.7
+        )
+        if llama_documents:
+            print(f"Successfully created {len(llama_documents)} LlamaIndex documents.")
+            print("\n--- Creating VectorStoreIndex (Vectorizing Data) ---")
+            try:
+                index = VectorStoreIndex.from_documents(llama_documents, show_progress=True)
+                index.storage_context.persist(persist_dir=PERSIST_DIR)
+                print(f"VectorStoreIndex created and persisted successfully to '{PERSIST_DIR}'.")
+            except Exception as e:
+                print(f"Error creating VectorStoreIndex or persisting: {e}")
+                print("Ensure your embedding model and LLM are correctly configured and accessible.")
+        else:
+            print("No LlamaIndex documents were created, so no indexing/vectorization can occur.")
     else:
-        print("No LlamaIndex documents were created, so no indexing/vectorization can occur.")
+        print(f"\n--- Persistence directory '{PERSIST_DIR}' found. Loading index from storage. ---")
+        try:
+            storage_context = StorageContext.from_defaults(persist_dir=PERSIST_DIR)
+            index = load_index_from_storage(storage_context)
+            print(f"VectorStoreIndex loaded successfully from '{PERSIST_DIR}'.")
+        except Exception as e:
+            print(f"Error loading VectorStoreIndex from storage: {e}")
+            print("The persisted index might be corrupted or incompatible. Consider deleting the folder and re-running.")
+            index = None # Ensure index is None if loading fails
+
+    # Only proceed with querying if the index was successfully created or loaded
+    if index:
+        query_engine = index.as_query_engine()
+
+        print("\n" + "="*80)
+        print("Starting comprehensive table queries...")
+        print("="*80 + "\n")
+
+        query_count = 1
+        # --- Queries for Medical History (Table 14.1.3.3) ---
+        print(f"\n--- Query {query_count}: Medical History by System Organ Class ---")
+        response = query_engine.query(
+            "**ABSOLUTELY NO SUMMARIZATION or REINTERPRETATION.** "
+            "Provide ONLY the raw, full markdown table content for the **'Medical History'** table (`Table 14.1.3.3`). "
+            "Include 'System Organ Class', 'Preferred Term', 'Treatment A (N=xxx) n (%)', 'Treatment B (N=xxx) n (%)', 'Total (N=xxx) n (%)' as columns. "
+            "Ensure all rows including 'Subjects with any Report' and nested preferred terms are present and correctly aligned."
+        )
+        print(f"\nResponse {query_count}:\n{response}")
+        query_count += 1
+
+
+        print("\n" + "="*80)
+        print("All queries completed.")
+        print("="*80 + "\n")
+
+    else:
+        print("\nCannot proceed with querying as the index could not be created or loaded.")
