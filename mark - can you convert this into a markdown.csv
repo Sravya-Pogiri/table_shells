@@ -1,0 +1,289 @@
+Table 14.1.2.1: Demographic and Baseline Characteristics Full Analysis Set,,,,
+Characteristics,,,,
+Ethnicity [for US studies only],,Treatment A (N=xxx​),Treatment B (N=xxxx),Total (N=xxxx)
+,Hispanic/Latino,xx(xx.x),xx(xx.x),xx(xx.x)
+,Non-Hispanic/Non-Latino,xx(xx.x),xx(xx.x),xx(xx.x)
+,Unknown,xx(xx.x),xx(xx.x),xx(xx.x)
+,,,,
+Height (cm),,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,n,xx,xx,xx
+,Mean,xxx.xx,xxx.xx,xxx.xx
+,Standard Deviation,xxx.xxx,xxx.xxx,xxx.xxx
+,Median,xxx.xx,xxx.xx,xxx.xx
+,"Min, Max","xxx, xxx","xxx,xxx","xxx,xxx"
+,,,,
+Weight (kg),,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,n,xx,xx,xx
+,Mean,xxx.xx,xxx.xx,xxx.xx
+,Standard Deviation,xxx.xxx,xxx.xxx,xxx.xxx
+,Median,xxx.xx​,xxx.xx​,xxx.xx​
+,"Min, Max","xxx,xxx","xxx,xxx","xxx, xxx"
+,,,,
+Body Mass Index (kg/m2),,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,n,xx,xx,xx
+,Mean,xxx.xx,xxx.xx,xxx.xx
+,Standard Deviation,xxx.xxx,xxx.xxx,xxx.xxx
+,Median,xxx.xx,xxx.xx,xxx.xx
+,"Min, Max","xxx, xxx","xxx, xxx","xxx, xxx"
+,,,,
+Body Surface Area (m2),,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,n,xx,xx,xx
+,Mean,xxx.xx,xxx.xx,xxx.xx
+,Standard Deviation,xxx.xxx,xxx.xxx,xxx.xxx
+,Median,xxx.xx,xxx.xx,xxx.xx
+,"Min, Max","xxx, xxx","xxx, xxx","xxx, xxx"
+,,,,
+Stratification Factor 1 (EDC),,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Level 1,xx(xx.x),xx(xx.x),xx(xx.x)
+,Level 2,xx(xx.x),xx(xx.x),xx(xx.x)
+,,,,
+Stratification Factor 1 (IXRS),,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Level 1,xx(xx.x),xx(xx.x),xx(xx.x)
+,Level 2,xx(xx.x),xx(xx.x),xx(xx.x)
+,,,,
+ECOG Performance Status,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,0 - Fully Active,xx(xx.x),xx(xx.x),xx(xx.x)
+,1 - Restricted in Physically Strenuous Activity,xx(xx.x),xx(xx.x),xx(xx.x)
+,2 - Ambulatory and Capable of All Self-Care,xx(xx.x),xx(xx.x),xx(xx.x)
+,3 - Capable of only limited self-care,xx(xx.x),xx(xx.x),xx(xx.x)
+,4 - Completely disabled,xx(xx.x),xx(xx.x),xx(xx.x)
+,,,,
+12-Lead ECG,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Normal,xx(xx.x),xx(xx.x),xx(xx.x)
+,"Abnormal, Not Clinically Significant",xx(xx.x),xx(xx.x),xx(xx.x)
+,Clinically significant findings,xx(xx.x),xx(xx.x),xx(xx.x)
+,Not Performed,xx(xx.x),xx(xx.x),xx(xx.x)
+,,,,
+Baseline/Biomarker Subgroups,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Category 1,xx(xx.x),xx(xx.x),xx(xx.x)
+,Category 2,xx(xx.x),xx(xx.x),xx(xx.x)
+,,,,
+Smoking Status,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Never,xx(xx.x),xx(xx.x),xx(xx.x)
+,Former,xx(xx.x)​,xx(xx.x)​,xx(xx.x)
+,Current,xx(xx.x),xx(xx.x),xx(xx.x)
+,,,,
+Bone marrow/aspirate blast count at baseline,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Mean,xx.x,xx.x,xx.x
+,Median,xx.x,xx.x,xx.x
+,n,xx.xx,xx.xx,xx.xx
+,Standard Deviation,xx(xx.x),xx(xx.x),xx(xx.x)
+,"Min, Max","xx.x,xx.x","xx.x,xx.x","xx.x,xx.x"
+,<Median,xx(xx.x),xx(xx.x),xx(xx.x)
+,>=Median,xx(xx.x),xx(xx.x),xx(xx.x)
+,,,,
+Region/Country of Enrollment,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,North America,xx(xx.x),xx(xx.x),xx(xx.x)
+,Country 1,xx(xx.x)​,xx(xx.x)​,xx(xx.x)
+,Asia,xx(xx.x),xx(xx.x),xx(xx.x)
+,Country 1,xx(xx.x),xx(xx.x),xx(xx.x)
+,Europe (required to list all countries),xx(xx.x),xx(xx.x),xx(xx.x)
+,Country 1,xx(xx.x),xx(xx.x),xx(xx.x)
+,Country 2,xx(xx.x),xx(xx.x)​,xx(xx.x)
+,Country n,xx(xx.x),xx(xx.x),xx(xx.x)
+,Rest of World,xx(xx.x),xx(xx.x),xx(xx.x)
+,Country 1,xx(xx.x),xx(xx.x),xx(xx.x)
+,Country 2,xx(xx.x),xx(xx.x),xx(xx.x)
+,Country n,xx(xx.x),xx(xx.x),xx(xx.x)
+Notes: The baseline value is defined as the last non-missing value before initial administration of study drug. [a] Age in years is calculated using the date of birth and date of informed consent. Source Data: adam.adsl; Listing 16.2.4.,,,,
+Table 14.1.3.1: Prior [xxxxx] Cancer History [for Solid Tumor] Full Analysis Set,,,,
+Parameter,,,,
+,,,,
+Time from Initial Histologic Diagnosis to Randomization (days),,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,n,xx,xx,xx
+,Mean,xxx.x,xxx.x,xxx.x
+,Standard Deviation,xxx.xx,xxx.xx,xxx.xx
+,Median,xxx.x,xxx.x,xxx.x
+,"Min, Max","xxx, xxx","xxx, xxx","xxx, xxx"
+,,,,
+Histology,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Adenocarcinoma,xx (xx.x),xx (xx.x),xx (xx.x)
+,Squamous,xx (xx.x),xx (xx.x),xx (xx.x)
+,Large Cell,xx (xx.x),xx (xx.x),xx (xx.x)
+,Not Done,xx (xx.x),xx (xx.x),xx (xx.x)
+,Other,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Tumor Stage at Initial Diagnosis,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,0,xx (xx.x),xx (xx.x),xx (xx.x)
+,I,xx (xx.x),xx (xx.x),xx (xx.x)
+,IA,xx (xx.x),xx (xx.x),xx (xx.x)
+,IB,xx (xx.x),xx (xx.x),xx (xx.x)
+,II,xx (xx.x),xx (xx.x),xx (xx.x)
+,IIA,xx (xx.x),xx (xx.x),xx (xx.x)
+,IIB,xx (xx.x),xx (xx.x),xx (xx.x)
+,III,xx (xx.x),xx (xx.x),xx (xx.x)
+,IIIA,xx (xx.x),xx (xx.x),xx (xx.x)
+,IIIB,xx (xx.x),xx (xx.x),xx (xx.x)
+,IIIC,xx (xx.x),xx (xx.x),xx (xx.x)
+,IV,xx (xx.x),xx (xx.x),xx (xx.x)
+,IVA,xx (xx.x),xx (xx.x),xx (xx.x)
+,IVB,xx (xx.x),xx (xx.x),xx (xx.x)
+,Unknown,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Tumor Stage at Study Entry,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,0,xx (xx.x),xx (xx.x),xx (xx.x)
+,I,xx (xx.x),xx (xx.x),xx (xx.x)
+,IA,xx (xx.x),xx (xx.x),xx (xx.x)
+,IB,xx (xx.x),xx (xx.x),xx (xx.x)
+,II,xx (xx.x),xx (xx.x),xx (xx.x)
+,IIA,xx (xx.x),xx (xx.x),xx (xx.x)
+,IIB,xx (xx.x),xx (xx.x),xx (xx.x)
+,III,xx (xx.x),xx (xx.x),xx (xx.x)
+,IIIA,xx (xx.x),xx (xx.x),xx (xx.x)
+,IIIB,xx (xx.x),xx (xx.x),xx (xx.x)
+,IIIC,xx (xx.x),xx (xx.x),xx (xx.x)
+,IV,xx (xx.x),xx (xx.x),xx (xx.x)
+,IVA,xx (xx.x),xx (xx.x),xx (xx.x)
+,IVB,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+TNM Stage at Study Entry (T),,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,TX,xx (xx.x),xx (xx.x),xx (xx.x)
+,T0,xx (xx.x),xx (xx.x),xx (xx.x)
+,Tis,xx (xx.x),xx (xx.x),xx (xx.x)
+,T1,xx (xx.x),xx (xx.x),xx (xx.x)
+,T1a,xx (xx.x),xx (xx.x),xx (xx.x)
+,T1b,xx (xx.x),xx (xx.x),xx (xx.x)
+,T2,xx (xx.x),xx (xx.x),xx (xx.x)
+,T3,xx (xx.x),xx (xx.x),xx (xx.x)
+,T4,xx (xx.x),xx (xx.x),xx (xx.x)
+,T4a,xx (xx.x),xx (xx.x),xx (xx.x)
+,T4b,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+TNM Stage at Study Entry (N),,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,NX,xx (xx.x),xx (xx.x),xx (xx.x)
+,N0,xx (xx.x),xx (xx.x),xx (xx.x)
+,N1,xx (xx.x),xx (xx.x),xx (xx.x)
+,N2,xx (xx.x),xx (xx.x),xx (xx.x)
+,N3,xx (xx.x),xx (xx.x),xx (xx.x)
+,N3a,xx (xx.x),xx (xx.x),xx (xx.x)
+,N3b,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+TNM Stage at Study Entry (M),,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,M0,xx (xx.x),xx (xx.x),xx (xx.x)
+,M1,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Histologic Grade,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Well Differentiated,xx (xx.x),xx (xx.x),xx (xx.x)
+,Moderately Differentiated,xx (xx.x),xx (xx.x),xx (xx.x)
+,Poorly Differentiated,xx (xx.x),xx (xx.x),xx (xx.x)
+,Undifferentiated,xx (xx.x),xx (xx.x),xx (xx.x)
+,Unknown,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+History of Brain Metastasis,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Yes,xx (xx.x),xx (xx.x),xx (xx.x)
+,No,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+History of Other Metastasis,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Yes,xx (xx.x),xx (xx.x),xx (xx.x)
+,No,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Location of Metastasis [in a descending # order],,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,CNS (brain),xx (xx.x),xx (xx.x),xx (xx.x)
+,Bone,xx (xx.x),xx (xx.x),xx (xx.x)
+,Adrenal Glands,xx (xx.x),xx (xx.x),xx (xx.x)
+,Lung,xx (xx.x),xx (xx.x),xx (xx.x)
+,Liver,xx (xx.x),xx (xx.x),xx (xx.x)
+,Pericardium,xx (xx.x),xx (xx.x),xx (xx.x)
+,Kidneys,xx (xx.x),xx (xx.x),xx (xx.x)
+,Other,xx (xx.x),xx (xx.x),xx (xx.x)
+"Source Data: adam.adsl; Listing16.2.x.x.x. [The shell below uses lung cancer as an example, for breast cancer, gastric cancer, etc., refer to study CRFs for modification]",,,,
+Table 14.1.3.2: Prior Cancer Therapy [for Solid Tumor] Full Analysis Set,,,,
+Parameter,,,,
+,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+Any Prior Systemic Cancer Therapy,,xx (xx.x),xx (xx.x),xx (xx.x)
+,Class 1,xx (xx.x),xx (xx.x),xx (xx.x)
+,     Subclass 1,xx (xx.x),xx (xx.x),xx (xx.x)
+,          Drug 1,xx (xx.x),xx (xx.x),xx (xx.x)
+,          Drug 2,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Lines of Prior Systemic Cancer Therapy for Relapsed or Metastatic Disease,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,1,xx (xx.x),xx (xx.x),xx (xx.x)
+,2,xx (xx.x),xx (xx.x),xx (xx.x)
+,3,xx (xx.x),xx (xx.x),xx (xx.x)
+,4+,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Number of Regimens of Prior Systemic Cancer Therapy,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,1,xx (xx.x),xx (xx.x),xx (xx.x)
+,2,xx (xx.x),xx (xx.x),xx (xx.x)
+,3,xx (xx.x),xx (xx.x),xx (xx.x)
+,4+,xx (xx.x),xx (xx.x),xx (xx.x)
+,n,xx,xx,xx
+,Mean,xx.x,xx.x,xx.x
+,Median,xx.x,xx.x,xx.x
+,"Min, Max","xx, xx","xx, xx","xx, xx"
+,,,,
+Number of Prior Cancer Chemotherapy,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,n,xx,xx,xx
+,Mean,xx.x,xx.x,xx.x
+,Median,xx.x,xx.x,xx.x
+,"Min, Max","xx, xx","xx, xx","xx, xx"
+,,,,
+Intent of Prior Cancer Chemotherapy Regimens,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Neo-Adjuvant,xx (xx.x),xx (xx.x),xx (xx.x)
+,Local Advanced,xx (xx.x),xx (xx.x),xx (xx.x)
+,Metastatic,xx (xx.x),xx (xx.x),xx (xx.x)
+,Preventive,xx (xx.x),xx (xx.x),xx (xx.x)
+,Maintenance,xx (xx.x),xx (xx.x),xx (xx.x)
+,Other,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Best Response to [Prior or Most Recent] Therapy,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Complete Response (CR),xx (xx.x),xx (xx.x),xx (xx.x)
+,Partial Response (PR),xx (xx.x),xx (xx.x),xx (xx.x)
+,Stable Disease (SD),xx (xx.x),xx (xx.x),xx (xx.x)
+,Progressive Disease (PD),xx (xx.x),xx (xx.x),xx (xx.x)
+,Unknown (UNK),xx (xx.x),xx (xx.x),xx (xx.x)
+,Not Applicable (NA),xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Reason for Discontinuation of Prior Therapy,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Disease Progression,xx (xx.x),xx (xx.x),xx (xx.x)
+,Adverse Event,xx (xx.x),xx (xx.x),xx (xx.x)
+,Completed Therapy,xx (xx.x),xx (xx.x),xx (xx.x)
+,Investigator Decision,xx (xx.x),xx (xx.x),xx (xx.x)
+,Cost,xx (xx.x),xx (xx.x),xx (xx.x)
+,Patient Choice,xx (xx.x),xx (xx.x),xx (xx.x)
+,Regimen Availability,xx (xx.x),xx (xx.x),xx (xx.x)
+,Unknown,xx (xx.x),xx (xx.x),xx (xx.x)
+,Other,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Prior Radiation Therapy,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Yes,xx (xx.x),xx (xx.x),xx (xx.x)
+,No,xx (xx.x),xx (xx.x),xx (xx.x)
+,Missing,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Type of Prior Radiation Therapy,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Cranial,xx (xx.x),xx (xx.x),xx (xx.x)
+,Stereotactic,xx (xx.x),xx (xx.x),xx (xx.x)
+,General,xx (xx.x),xx (xx.x),xx (xx.x)
+,Other,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Prior Cancer Surgery,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Yes,xx (xx.x),xx (xx.x),xx (xx.x)
+,No,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Prior Cancer Biopsy,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Yes,xx (xx.x),xx (xx.x),xx (xx.x)
+,No,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+Subjects with any prior anti-cancer therapy n (%),,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Agent Name 1,xx (xx.x),xx (xx.x),xx (xx.x)
+,Agent Name 2,xx (xx.x),xx (xx.x),xx (xx.x)
+"Note: If a subject had more than one agent within the same regimen, the subject was counted at each relevant agent. ",,,,
+Source Data: adam.adsl; Listing 16.2.x.x.,,,,
+Table 14.1.3.3: Medical History Full /Safety Analysis Set,,,,
+,,,,
+System Organ Class,,Treatment A (N=xxx),Treatment B (N=xxx),Total (N=xxx)
+,Subjects with any Report,xx (xx.x),xx (xx.x),xx (xx.x)
+,     System Organ Class 1,xx (xx.x),xx (xx.x),xx (xx.x)
+,          Preferred Term 1,xx (xx.x),xx (xx.x),xx (xx.x)
+,          Preferred Term 2,xx (xx.x),xx (xx.x),xx (xx.x)
+,          Preferred Term n,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+,     System Organ Class 2,xx (xx.x),xx (xx.x),xx (xx.x)
+,          Preferred Term 1,xx (xx.x),xx (xx.x),xx (xx.x)
+,          Preferred Term 2,xx (xx.x),xx (xx.x),xx (xx.x)
+,          Preferred Term n,xx (xx.x),xx (xx.x),xx (xx.x)
+,,,,
+,     System Organ Class n,xx (xx.x),xx (xx.x),xx (xx.x)
+,          Preferred Term 1,xx (xx.x),xx (xx.x),xx (xx.x)
+,          Preferred Term 2,xx (xx.x),xx (xx.x),xx (xx.x)
+,          Preferred Term n,xx (xx.x),xx (xx.x),xx (xx.x)
