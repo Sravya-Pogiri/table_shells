@@ -153,6 +153,7 @@ def run_variable_extractor_app():
         st.session_state.sap_model = SAPEmbedsWeb()
 
     if uploaded_file:
+        # Check if the file has changed to avoid reprocessing
         if st.session_state.get('last_uploaded_file_name') != uploaded_file.name:
             with st.spinner(f"Processing '{uploaded_file.name}'..."):
                 with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as tmp_file:
@@ -163,7 +164,8 @@ def run_variable_extractor_app():
             st.success(f"Loaded {len(st.session_state.chunks)} chunks from '{uploaded_file.name}'")
             st.session_state.last_uploaded_file_name = uploaded_file.name
             st.session_state.chat_history = []
-    
+            st.experimental_rerun() # Force a single rerun here to update UI
+
     if 'chunks' in st.session_state and st.session_state.chunks:
         st.subheader("❓ Ask a Question")
         sample_questions = [
@@ -176,6 +178,7 @@ def run_variable_extractor_app():
         for i, q in enumerate(sample_questions):
             if cols[i].button(q, key=f"sample_{i}"):
                 st.session_state.current_question = q
+                st.session_state.query_submitted = True
         
         question = st.text_input(
             "Enter your question:", 
@@ -183,13 +186,13 @@ def run_variable_extractor_app():
             key="question_input"
         )
         
-        if st.button("Ask Question", type="primary"):
+        if st.button("Ask Question", type="primary") or st.session_state.get('query_submitted'):
             if question:
+                st.session_state.query_submitted = False
                 with st.spinner("Analyzing document..."):
                     results = st.session_state.sap_model.analyzeLLM(question)
                 st.session_state.chat_history.insert(0, (question, results))
                 st.session_state.current_question = ""
-                st.rerun() # This rerun is fine as it's for the chat flow
 
         if st.session_state.get('chat_history'):
             st.subheader("Latest Results")
@@ -274,19 +277,37 @@ def markdown_to_dataframe(md_string: str) -> pd.DataFrame:
     except Exception:
         return pd.DataFrame({'Raw Response': [md_string]})
 
+def text_to_dataframe(text_input: str) -> pd.DataFrame:
+    """
+    Converts raw text input (assumed to be CSV-like) into a pandas DataFrame.
+    """
+    try:
+        return pd.read_csv(io.StringIO(text_input))
+    except Exception as e:
+        st.error(f"Failed to parse input text as a table: {e}")
+        return pd.DataFrame()
+
 @st.cache_resource
 def load_rag_query_engine():
     """
     Loads the LlamaIndex RAG query engine and parses the table structure.
+    This version includes a check for a user-uploaded file.
     """
-    file_path = "mark - can you convert this into a markdown.csv"
-    persist_dir = "./rag_storage"
-    st.info("Initializing Table Shell Model...")
-    if not os.path.exists(file_path):
-        st.error(f"Source file not found: '{file_path}'.")
-        return None, {}
-    try:
+    if 'user_table_file' in st.session_state and st.session_state.user_table_file is not None:
+        file_content = st.session_state.user_table_file.getvalue()
+        file_io = io.BytesIO(file_content)
+        st.info("Using user-uploaded file to build table index...")
+        main_table_df = pd.read_csv(file_io, header=None)
+    else:
+        file_path = "mark - can you convert this into a markdown.csv"
+        if not os.path.exists(file_path):
+            st.error(f"Source file not found: '{file_path}'. Please upload a table CSV.")
+            return None, {}
+        st.info("Using default pre-existing file to build table index...")
         main_table_df = pd.read_csv(file_path, header=None)
+    
+    persist_dir = "./rag_storage"
+    try:
         hierarchical_tables = parse_clinical_data_hierarchical(main_table_df)
         if not hierarchical_tables: raise ValueError("Parser did not find any valid tables.")
         st.success(f"Parser finished. Found {len(hierarchical_tables)} main categories.")
@@ -297,16 +318,12 @@ def load_rag_query_engine():
 
     Settings.llm = LlamaIndexOllama(model="mistral", request_timeout=1000.0)
     Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5")
-    if not os.path.exists(persist_dir):
-        st.info("Building new vector index for tables...")
-        documents = [Document(text=f"Table: {name}\n{df.to_markdown(index=False)}", metadata={"table_name": name}) for name, df in parsed_tables.items()]
-        index = VectorStoreIndex.from_documents(documents)
-        index.storage_context.persist(persist_dir=persist_dir)
-        st.info("Index created and saved.")
-    else:
-        st.info("Loading existing table index from storage.")
-        index = load_index_from_storage(StorageContext.from_defaults(persist_dir=persist_dir))
-
+    
+    st.info("Building new vector index for tables...")
+    documents = [Document(text=f"Table: {name}\n{df.to_markdown(index=False)}", metadata={"table_name": name}) for name, df in parsed_tables.items()]
+    index = VectorStoreIndex.from_documents(documents)
+    st.session_state.index_ready = True
+    
     qa_template = PromptTemplate("Context: {context_str}\nQuestion: {query_str}\nAssistant: Find the table and return only its full markdown content.")
     query_engine = index.as_query_engine(text_qa_template=qa_template)
     st.success("Table Shell Model is ready.")
@@ -316,9 +333,20 @@ def run_table_shell_app():
     st.header("2. Interactive Clinical Table Shell Generator")
     st.markdown("Select table shells, create custom ones, edit everything, and download.")
 
+    uploaded_table_file = st.file_uploader(
+        "**Upload a Table Shell CSV**",
+        type='csv',
+        key='table_uploader',
+        help="Upload a new CSV file to replace the default table shells."
+    )
+    if uploaded_table_file and uploaded_table_file != st.session_state.get('last_uploaded_table_file'):
+        st.session_state.user_table_file = uploaded_table_file
+        load_rag_query_engine.clear()
+        st.session_state.last_uploaded_table_file = uploaded_table_file
+        # No rerun needed here, the change in session state will trigger a rerun automatically
+
     query_engine, hierarchical_categories = load_rag_query_engine()
     if not query_engine:
-        st.error("Table Shell Generator could not be loaded.")
         return
 
     if 'generated_tables' not in st.session_state: st.session_state.generated_tables = {}
@@ -326,6 +354,8 @@ def run_table_shell_app():
     
     st.subheader("Select or Add Tables")
     main_category_options = list(hierarchical_categories.keys())
+    
+    # Check if a category is selected and update the state
     if 'selected_main_category' not in st.session_state or st.session_state.selected_main_category not in main_category_options:
         st.session_state.selected_main_category = main_category_options[0] if main_category_options else None
 
@@ -355,27 +385,48 @@ def run_table_shell_app():
                             if category not in st.session_state.table_order:
                                 st.session_state.table_order.append(category)
                 
-                for category in list(st.session_state.generated_tables.keys()): # Iterate on a copy
+                for category in list(st.session_state.generated_tables.keys()):
                     if category in sub_category_options and category not in selected_sub_categories:
                         del st.session_state.generated_tables[category]
-                        st.session_state.table_order.remove(category)
-            # No st.rerun() needed here, Streamlit handles it
+                        if category in st.session_state.table_order:
+                             st.session_state.table_order.remove(category)
 
     with st.expander("Add a New Custom Table"):
-        new_category_name = st.text_input("Enter name for new table category:")
+        new_category_name = st.text_input("Enter name for new table category:", key="new_table_name")
+        st.markdown("Or paste a table (CSV format is recommended):")
+        pasted_table_content = st.text_area(
+            "Paste your table content here",
+            height=200,
+            key="pasted_table_content",
+            help="Paste raw text, such as comma-separated values (CSV) with a header row."
+        )
+        
         if st.button("➕ Add Custom Table"):
             name = new_category_name.strip()
-            if name and name not in st.session_state.generated_tables:
-                st.session_state.generated_tables[name] = pd.DataFrame({'Variable': ['Placeholder 1'], 'Group A': ['...']})
-                st.session_state.table_order.append(name)
-            elif not name: st.warning("Please enter a name.")
-            else: st.error(f"A table named '{name}' already exists.")
-            
+            if not name:
+                st.warning("Please enter a name.")
+            elif name in st.session_state.generated_tables:
+                st.error(f"A table named '{name}' already exists.")
+            else:
+                if pasted_table_content:
+                    df = text_to_dataframe(pasted_table_content)
+                    if not df.empty:
+                        st.session_state.generated_tables[name] = df
+                        st.session_state.table_order.append(name)
+                        st.success(f"Custom table '{name}' added successfully!")
+                        # Clear inputs without rerunning
+                        st.session_state.new_table_name = ""
+                        st.session_state.pasted_table_content = ""
+                else:
+                    st.session_state.generated_tables[name] = pd.DataFrame({'Variable': ['Placeholder 1'], 'Group A': ['...']})
+                    st.session_state.table_order.append(name)
+                    st.success(f"Custom placeholder table '{name}' added successfully!")
+                    st.session_state.new_table_name = ""
+
     if st.session_state.generated_tables:
         st.subheader("Edit and Download Tables")
         st.info("Use the buttons to reorder, and edit headers/data. All changes are saved automatically.")
 
-        # This will hold the latest state from all data_editor widgets
         edited_data_from_widgets = {}
 
         for i, category in enumerate(st.session_state.table_order):
@@ -384,7 +435,6 @@ def run_table_shell_app():
                 col1, col2 = st.columns([0.8, 0.2])
                 col1.subheader(f"Table: {category}")
                 
-                # --- REORDERING BUTTONS (NO st.rerun()) ---
                 reorder_cols = col2.columns([1, 1, 5])
                 if reorder_cols[0].button("⬆️", key=f"up_{category}", help="Move table up"):
                     if i > 0:
@@ -393,19 +443,15 @@ def run_table_shell_app():
                     if i < len(st.session_state.table_order) - 1:
                         st.session_state.table_order.insert(i + 1, st.session_state.table_order.pop(i))
 
-                # --- HEADER EDITING (NO st.rerun()) ---
                 new_headers = [st.text_input(f"Header for '{col}'", value=col, key=f"h_{category}_{j}") for j, col in enumerate(df.columns)]
                 if st.button(f"Apply Header Changes for '{category}'", key=f"apply_{category}"):
-                    # Create a new DataFrame with the changes to ensure Streamlit registers the update
                     df_copy = df.copy()
                     df_copy.columns = new_headers
                     st.session_state.generated_tables[category] = df_copy
 
-                # The data_editor's return value IS the current state of the data
                 edited_df = st.data_editor(df, key=f"editor_{category}", num_rows="dynamic", use_container_width=True)
                 edited_data_from_widgets[category] = edited_df
 
-        # After rendering all widgets, update the main state with the collected edits
         st.session_state.generated_tables.update(edited_data_from_widgets)
 
         output = io.StringIO()
@@ -430,13 +476,13 @@ def main():
         st.subheader("🗣️ Conversation History")
         if st.button("Clear History"):
             st.session_state.chat_history = []
-            st.rerun()
+            
         if st.session_state.get('chat_history'):
             for i, (q, a) in enumerate(st.session_state.chat_history):
                 if st.button(q, key=f"history_{i}"):
                     st.session_state.current_question = q
-                    st.rerun()
-
+                    st.session_state.query_submitted = True # Set flag to trigger query on next rerun
+                    
     run_variable_extractor_app()
     st.divider()
     run_table_shell_app()
