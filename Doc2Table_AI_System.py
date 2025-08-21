@@ -164,7 +164,7 @@ def run_variable_extractor_app():
             st.success(f"Loaded {len(st.session_state.chunks)} chunks from '{uploaded_file.name}'")
             st.session_state.last_uploaded_file_name = uploaded_file.name
             st.session_state.chat_history = []
-            st.experimental_rerun() # Force a single rerun here to update UI
+            st.rerun() # Force a single rerun here to update UI
 
     if 'chunks' in st.session_state and st.session_state.chunks:
         st.subheader("❓ Ask a Question")
@@ -343,7 +343,7 @@ def run_table_shell_app():
         st.session_state.user_table_file = uploaded_table_file
         load_rag_query_engine.clear()
         st.session_state.last_uploaded_table_file = uploaded_table_file
-        # No rerun needed here, the change in session state will trigger a rerun automatically
+        st.rerun()
 
     query_engine, hierarchical_categories = load_rag_query_engine()
     if not query_engine:
@@ -355,7 +355,6 @@ def run_table_shell_app():
     st.subheader("Select or Add Tables")
     main_category_options = list(hierarchical_categories.keys())
     
-    # Check if a category is selected and update the state
     if 'selected_main_category' not in st.session_state or st.session_state.selected_main_category not in main_category_options:
         st.session_state.selected_main_category = main_category_options[0] if main_category_options else None
 
@@ -390,70 +389,69 @@ def run_table_shell_app():
                         del st.session_state.generated_tables[category]
                         if category in st.session_state.table_order:
                              st.session_state.table_order.remove(category)
+            st.rerun()
 
     with st.expander("Add a New Custom Table"):
-        new_category_name = st.text_input("Enter name for new table category:", key="new_table_name")
-        st.markdown("Or paste a table (CSV format is recommended):")
-        pasted_table_content = st.text_area(
-            "Paste your table content here",
-            height=200,
-            key="pasted_table_content",
-            help="Paste raw text, such as comma-separated values (CSV) with a header row."
-        )
+        new_category_name = st.text_input("Enter a name for the new table:", key="new_table_name")
         
         if st.button("➕ Add Custom Table"):
             name = new_category_name.strip()
             if not name:
-                st.warning("Please enter a name.")
+                st.warning("Please enter a name for the new table.")
             elif name in st.session_state.generated_tables:
-                st.error(f"A table named '{name}' already exists.")
+                st.error(f"A table with the name '{name}' already exists. Please choose a different name.")
             else:
-                if pasted_table_content:
-                    df = text_to_dataframe(pasted_table_content)
-                    if not df.empty:
-                        st.session_state.generated_tables[name] = df
-                        st.session_state.table_order.append(name)
-                        st.success(f"Custom table '{name}' added successfully!")
-                        # Clear inputs without rerunning
-                        st.session_state.new_table_name = ""
-                        st.session_state.pasted_table_content = ""
-                else:
-                    st.session_state.generated_tables[name] = pd.DataFrame({'Variable': ['Placeholder 1'], 'Group A': ['...']})
-                    st.session_state.table_order.append(name)
-                    st.success(f"Custom placeholder table '{name}' added successfully!")
-                    st.session_state.new_table_name = ""
+                # --- MODIFIED LINE ---
+                st.session_state.generated_tables[name] = pd.DataFrame({
+                    'Variable': ['Placeholder Row 1'], 
+                    'Group A (N=XX)': ['...'], 
+                    'Group B (N=XX)': ['...'],
+                    'Group C (N=XX)': ['...'] # Added the fourth column here
+                })
+                st.session_state.table_order.append(name)
+                st.success(f"Added new placeholder table: '{name}'. You can now edit it below.")
+                st.rerun()
 
     if st.session_state.generated_tables:
         st.subheader("Edit and Download Tables")
-        st.info("Use the buttons to reorder, and edit headers/data. All changes are saved automatically.")
+        st.info("Use the buttons to reorder, and edit headers/data. Changes are saved instantly.")
 
-        edited_data_from_widgets = {}
-
-        for i, category in enumerate(st.session_state.table_order):
+        # Loop through a copy of the list to avoid issues while reordering
+        for i, category in enumerate(st.session_state.table_order[:]):
             df = st.session_state.generated_tables[category]
             with st.container(border=True):
                 col1, col2 = st.columns([0.8, 0.2])
-                col1.subheader(f"Table: {category}")
+                with col1:
+                    st.subheader(f"Table: {category}")
                 
-                reorder_cols = col2.columns([1, 1, 5])
-                if reorder_cols[0].button("⬆️", key=f"up_{category}", help="Move table up"):
-                    if i > 0:
-                        st.session_state.table_order.insert(i - 1, st.session_state.table_order.pop(i))
-                if reorder_cols[1].button("⬇️", key=f"down_{category}", help="Move table down"):
-                    if i < len(st.session_state.table_order) - 1:
-                        st.session_state.table_order.insert(i + 1, st.session_state.table_order.pop(i))
+                with col2:
+                    reorder_cols = st.columns(2)
+                    if reorder_cols[0].button("⬆️", key=f"up_{category}", help="Move table up", use_container_width=True):
+                        if i > 0:
+                            st.session_state.table_order.insert(i - 1, st.session_state.table_order.pop(i))
+                            st.rerun()
+                    if reorder_cols[1].button("⬇️", key=f"down_{category}", help="Move table down", use_container_width=True):
+                        if i < len(st.session_state.table_order) - 1:
+                            st.session_state.table_order.insert(i + 1, st.session_state.table_order.pop(i))
+                            st.rerun()
 
+                # The header editing logic is fine since it uses st.rerun()
                 new_headers = [st.text_input(f"Header for '{col}'", value=col, key=f"h_{category}_{j}") for j, col in enumerate(df.columns)]
                 if st.button(f"Apply Header Changes for '{category}'", key=f"apply_{category}"):
                     df_copy = df.copy()
                     df_copy.columns = new_headers
                     st.session_state.generated_tables[category] = df_copy
+                    st.rerun()
 
+                # Render the data editor
                 edited_df = st.data_editor(df, key=f"editor_{category}", num_rows="dynamic", use_container_width=True)
-                edited_data_from_widgets[category] = edited_df
 
-        st.session_state.generated_tables.update(edited_data_from_widgets)
-
+                # **THE FIX**: Immediately check for changes, update state, and rerun
+                if not df.equals(edited_df):
+                    st.session_state.generated_tables[category] = edited_df
+                    st.rerun()
+        
+        # The download logic remains the same
         output = io.StringIO()
         for category in st.session_state.table_order:
             df_to_save = st.session_state.generated_tables[category]
@@ -476,12 +474,14 @@ def main():
         st.subheader("🗣️ Conversation History")
         if st.button("Clear History"):
             st.session_state.chat_history = []
+            st.rerun()
             
         if st.session_state.get('chat_history'):
             for i, (q, a) in enumerate(st.session_state.chat_history):
                 if st.button(q, key=f"history_{i}"):
                     st.session_state.current_question = q
                     st.session_state.query_submitted = True # Set flag to trigger query on next rerun
+                    st.rerun()
                     
     run_variable_extractor_app()
     st.divider()
