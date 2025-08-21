@@ -1,5 +1,3 @@
-# SAPEmbeds_web.py
-
 # --- Core Imports ---
 import streamlit as st
 import pandas as pd
@@ -20,7 +18,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
 
 # --- App 2 (Table Shell Generator) Imports ---
-# Docling is used for advanced document parsing
 try:
     from docling.document_converter import DocumentConverter
 except ImportError:
@@ -55,7 +52,7 @@ class SAPEmbedsWeb:
         self.vectorizer = TfidfVectorizer(stop_words='english', max_features=1000)
         self.chunks = []
         self.vectors = None
-        self.llm_model = ollama # Use the imported ollama client
+        self.llm_model = ollama 
 
     def process_pdf(self, file_path: str, chunk_length: int = 400, chunk_overlap: int = 80):
         """Extracts text from a PDF and splits it into overlapping chunks."""
@@ -164,7 +161,7 @@ def run_variable_extractor_app():
             st.success(f"Loaded {len(st.session_state.chunks)} chunks from '{uploaded_file.name}'")
             st.session_state.last_uploaded_file_name = uploaded_file.name
             st.session_state.chat_history = []
-            st.rerun() # Force a single rerun here to update UI
+            st.rerun() 
 
     if 'chunks' in st.session_state and st.session_state.chunks:
         st.subheader("❓ Ask a Question")
@@ -291,7 +288,6 @@ def text_to_dataframe(text_input: str) -> pd.DataFrame:
 def load_rag_query_engine():
     """
     Loads the LlamaIndex RAG query engine and parses the table structure.
-    This version includes a check for a user-uploaded file.
     """
     if 'user_table_file' in st.session_state and st.session_state.user_table_file is not None:
         file_content = st.session_state.user_table_file.getvalue()
@@ -401,12 +397,11 @@ def run_table_shell_app():
             elif name in st.session_state.generated_tables:
                 st.error(f"A table with the name '{name}' already exists. Please choose a different name.")
             else:
-                # --- MODIFIED LINE ---
                 st.session_state.generated_tables[name] = pd.DataFrame({
                     'Variable': ['Placeholder Row 1'], 
                     'Group A (N=XX)': ['...'], 
                     'Group B (N=XX)': ['...'],
-                    'Group C (N=XX)': ['...'] # Added the fourth column here
+                    'Group C (N=XX)': ['...'] 
                 })
                 st.session_state.table_order.append(name)
                 st.success(f"Added new placeholder table: '{name}'. You can now edit it below.")
@@ -416,7 +411,6 @@ def run_table_shell_app():
         st.subheader("Edit and Download Tables")
         st.info("Use the buttons to reorder, and edit headers/data. Changes are saved instantly.")
 
-        # Loop through a copy of the list to avoid issues while reordering
         for i, category in enumerate(st.session_state.table_order[:]):
             df = st.session_state.generated_tables[category]
             with st.container(border=True):
@@ -434,8 +428,6 @@ def run_table_shell_app():
                         if i < len(st.session_state.table_order) - 1:
                             st.session_state.table_order.insert(i + 1, st.session_state.table_order.pop(i))
                             st.rerun()
-
-                # The header editing logic is fine since it uses st.rerun()
                 new_headers = [st.text_input(f"Header for '{col}'", value=col, key=f"h_{category}_{j}") for j, col in enumerate(df.columns)]
                 if st.button(f"Apply Header Changes for '{category}'", key=f"apply_{category}"):
                     df_copy = df.copy()
@@ -443,15 +435,12 @@ def run_table_shell_app():
                     st.session_state.generated_tables[category] = df_copy
                     st.rerun()
 
-                # Render the data editor
                 edited_df = st.data_editor(df, key=f"editor_{category}", num_rows="dynamic", use_container_width=True)
 
-                # **THE FIX**: Immediately check for changes, update state, and rerun
                 if not df.equals(edited_df):
                     st.session_state.generated_tables[category] = edited_df
                     st.rerun()
         
-        # The download logic remains the same
         output = io.StringIO()
         for category in st.session_state.table_order:
             df_to_save = st.session_state.generated_tables[category]
@@ -480,7 +469,7 @@ def main():
             for i, (q, a) in enumerate(st.session_state.chat_history):
                 if st.button(q, key=f"history_{i}"):
                     st.session_state.current_question = q
-                    st.session_state.query_submitted = True # Set flag to trigger query on next rerun
+                    st.session_state.query_submitted = True 
                     st.rerun()
                     
     run_variable_extractor_app()
