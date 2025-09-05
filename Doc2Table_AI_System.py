@@ -137,7 +137,7 @@ class SAPEmbedsWeb:
 
 def run_variable_extractor_app():
     """Renders the UI for the Variable Extractor app."""
-    st.header("1. Doc2Table AI: Variable Extractor")
+    st.header("1. TableGen AI: Variable Extractor")
     st.markdown("Upload a document, then ask questions to find and extract key variables.")
 
     uploaded_file = st.file_uploader(
@@ -455,7 +455,7 @@ def run_table_shell_app():
 # ##############################################################################
 
 def main():
-    st.title("Dual RAG AI Systems: Document Extractor & Table Generator")
+    st.title("TableGen AI: Document Extractor & Table Generator")
 
     with st.sidebar:
         st.header("Controls & History")
