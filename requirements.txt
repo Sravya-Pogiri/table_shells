@@ -10,7 +10,6 @@ annotated-types==0.7.0
 antlr4-python3-runtime==4.9.3
 anyio==4.9.0
 applaunchservices==0.3.0
-appnope @ file:///Users/cbousseau/work/recipes/ci_py311/appnope_1677917710869/work
 argon2-cffi @ file:///opt/conda/conda-bld/argon2-cffi_1645000214183/work
 argon2-cffi-bindings @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_2ef471wnyf/croot/argon2-cffi-bindings_1736182451265/work
 arrow==1.3.0
