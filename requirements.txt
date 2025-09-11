@@ -50,3 +50,10 @@ ollama
 pypdf2
 scikit-learn
 sentence-transformers
+llama-index
+docling[all]
+llama-index-embeddings-huggingface
+llama-index-llms-ollama
+pandas
+streamlit
+torch
