@@ -57,3 +57,4 @@ llama-index-llms-ollama
 pandas
 streamlit
 torch
+llama-index-llms-groq
