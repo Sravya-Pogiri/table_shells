@@ -49,3 +49,4 @@ yarl==1.9.4
 ollama
 pypdf2
 scikit-learn
+sentence-transformers
