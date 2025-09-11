@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import ollama
+import openai
 import PyPDF2
 import re
 import io
@@ -115,13 +116,13 @@ class SAPEmbedsWeb:
                     api_key=st.secrets["GROQ_API_KEY"]
                 )
                 response = client.chat.completions.create(
-                    model="llama3-70b-8192",
+                    model="llama-3.3-70b-versatile",
                     messages=[{
                         'role': 'user',
                         'content': prompt
                     }]
                 )
-                clean_response = self.clean_response(response['message']['content'])
+                clean_response = self.clean_response(response.choices[0].message.content)
                 results.append(clean_response)
             except Exception as e:
                 results.append(f"Error communicating with LLM: {str(e)}")
@@ -270,17 +271,39 @@ def parse_clinical_data_hierarchical(table_df: pd.DataFrame):
     return {k: v for k, v in structured_data.items() if v}
 
 def markdown_to_dataframe(md_string: str) -> pd.DataFrame:
-    """Converts a markdown table string into a pandas DataFrame."""
+    """
+    Converts a markdown table string from an LLM response into a pandas DataFrame.
+    This version robustly handles cases where the table is not fenced and may
+    include extraneous text like headings.
+    """
     try:
-        md_string = re.sub(r'```markdown\n|```', '', md_string).strip()
-        df = pd.read_csv(io.StringIO(md_string), sep='|', skipinitialspace=True).dropna(axis=1, how='all').iloc[1:]
+        # 1. Split the entire string into individual lines
+        lines = md_string.strip().split('\n')
+        
+        # 2. Keep only the lines that are part of the markdown table (start with '|')
+        # This effectively ignores headings, conversational text, etc.
+        table_lines = [line for line in lines if line.strip().startswith('|')]
+        
+        # 3. Join the filtered lines back into a single string
+        cleaned_md = '\n'.join(table_lines)
+
+        if not cleaned_md:
+            return pd.DataFrame()
+
+        # 4. Read the cleaned markdown string into a DataFrame
+        df = pd.read_csv(io.StringIO(cleaned_md), sep='|', skipinitialspace=True).dropna(axis=1, how='all').iloc[1:]
+        
+        # 5. Clean up column names and remove junk columns
         df.columns = [col.strip() for col in df.columns]
         df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
-        for col in df.columns: df[col] = df[col].str.strip()
+        for col in df.columns:
+            df[col] = df[col].str.strip()
+            
         return df.reset_index(drop=True)
     except Exception:
-        return pd.DataFrame({'Raw Response': [md_string]})
-
+        # If any error occurs during parsing, return an empty DataFrame
+        return pd.DataFrame()
+    
 def text_to_dataframe(text_input: str) -> pd.DataFrame:
     """
     Converts raw text input (assumed to be CSV-like) into a pandas DataFrame.
@@ -319,7 +342,7 @@ def load_rag_query_engine():
         st.error(f"Failed to parse source file for Table Generator: {e}")
         return None, {}
 
-    Settings.llm = Groq(model="llama3-70b-8192", api_key=st.secrets["GROQ_API_KEY"]) # <-- ADD THIS
+    Settings.llm = Groq(model="llama-3.3-70b-versatile", api_key=st.secrets["GROQ_API_KEY"]) # <-- ADD THIS
     Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5")
     
     st.info("Building new vector index for tables...")
