@@ -110,7 +110,11 @@ class SAPEmbedsWeb:
             Answer (list the variables):"""
 
             try:
-                response = self.llm_model.chat(model='llama3.2', messages=[{
+                client = ollama.Client(
+                    host='https://api.groq.com/openai/v1',
+                    headers={'Authorization': f'Bearer {st.secrets["GROQ_API_KEY"]}'}
+                )
+                response = client.chat(model='llama3-70b-8192', messages=[{
                     'role': 'user',
                     'content': prompt
                 }])
@@ -312,7 +316,7 @@ def load_rag_query_engine():
         st.error(f"Failed to parse source file for Table Generator: {e}")
         return None, {}
 
-    Settings.llm = LlamaIndexOllama(model="mistral", request_timeout=1000.0)
+    Settings.llm = Groq(model="llama3-70b-8192", api_key=st.secrets["GROQ_API_KEY"]) # <-- ADD THIS
     Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-base-en-v1.5")
     
     st.info("Building new vector index for tables...")
