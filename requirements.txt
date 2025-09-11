@@ -47,3 +47,4 @@ urllib3==2.2.2
 uvicorn==0.30.5
 yarl==1.9.4
 ollama
+pypdf2
