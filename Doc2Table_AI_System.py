@@ -110,14 +110,17 @@ class SAPEmbedsWeb:
             Answer (list the variables):"""
 
             try:
-                client = ollama.Client(
-                    host='https://api.groq.com/openai/v1',
-                    headers={'Authorization': f'Bearer {st.secrets["GROQ_API_KEY"]}'}
+                client = openai.Client(
+                    base_url="https://api.groq.com/openai/v1",
+                    api_key=st.secrets["GROQ_API_KEY"]
                 )
-                response = client.chat(model='llama3-70b-8192', messages=[{
-                    'role': 'user',
-                    'content': prompt
-                }])
+                response = client.chat.completions.create(
+                    model="llama3-70b-8192",
+                    messages=[{
+                        'role': 'user',
+                        'content': prompt
+                    }]
+                )
                 clean_response = self.clean_response(response['message']['content'])
                 results.append(clean_response)
             except Exception as e:

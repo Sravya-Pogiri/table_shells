@@ -51,9 +51,10 @@ pypdf2
 scikit-learn
 sentence-transformers
 llama-index
-docling[all]
+docling
 llama-index-embeddings-huggingface
 pandas
 streamlit
 torch
 llama-index-llms-groq
+openai
