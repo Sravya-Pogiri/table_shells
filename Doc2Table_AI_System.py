@@ -34,7 +34,7 @@ except ImportError:
 # LlamaIndex components for the RAG model
 from llama_index.core import VectorStoreIndex, Document, Settings, StorageContext, load_index_from_storage
 from llama_index.core.prompts import PromptTemplate
-from llama_index.llms.ollama import Ollama as LlamaIndexOllama
+from llama_index.llms.groq import Groq 
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
 
