@@ -50,12 +50,12 @@ class SAPEmbedsWeb:
     Uses TF-IDF for retrieval and Ollama for generation.
     """
     def __init__(self):
-        self.vectorizer = TfidfVectorizer(stop_words='english', max_features=1000)
+        self.vectorizer = TfidfVectorizer(stop_words='english', max_features=2000, ngram_range=(1, 2))
         self.chunks = []
         self.vectors = None
         self.llm_model = ollama 
 
-    def process_pdf(self, file_path: str, chunk_length: int = 400, chunk_overlap: int = 80):
+    def process_pdf(self, file_path: str, chunk_length: int = 1000, chunk_overlap: int = 200):
         """Extracts text from a PDF and splits it into overlapping chunks."""
         try:
             with open(file_path, 'rb') as file:
@@ -81,8 +81,8 @@ class SAPEmbedsWeb:
             st.error(f"Error processing PDF: {e}")
             return []
 
-    def retrieve(self, query, top=1):
-        """Retrieves the most relevant text chunk using TF-IDF."""
+    def retrieve(self, query, top=3):
+        """Retrieves the most relevant text chunks using TF-IDF."""
         if not self.chunks or self.vectors is None:
             return []
 
@@ -92,42 +92,48 @@ class SAPEmbedsWeb:
         return [self.chunks[i] for i in top_indices]
 
     def analyzeLLM(self, query):
-        """Sends the retrieved chunk and query to the LLM for analysis."""
-        best_chunks = self.retrieve(query, top=1)
+        """Sends the retrieved chunks and query to the LLM for analysis."""
+        best_chunks = self.retrieve(query, top=3)
         if not best_chunks:
             return ["Could not find a relevant chunk in the document for your query."]
 
-        results = []
-        for chunk in best_chunks:
-            prompt = f"""Answer the question using ONLY the given text chunk. Your primary goal is to extract and list the specific variables or items requested. Do not use outside information.
+        # Combine chunks for comprehensive analysis
+        combined_context = "\n\n---\n\n".join(best_chunks)
+        
+        prompt = f"""You are extracting variables from a clinical trial protocol. Extract ALL relevant variables mentioned in the context below.
 
-            Question: {query}
+Question: {query}
 
-            Text Chunk:
-            ---
-            {chunk}
-            ---
+Context from document:
+---
+{combined_context}
+---
 
-            Answer (list the variables):"""
+Instructions:
+1. List each variable on a new line
+2. Include the variable name exactly as it appears
+3. Format as a numbered or bulleted list
+4. Only include variables that directly answer the question
 
-            try:
-                client = openai.Client(
-                    base_url="https://api.groq.com/openai/v1",
-                    api_key=st.secrets["GROQ_API_KEY"]
-                )
-                response = client.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
-                    messages=[{
-                        'role': 'user',
-                        'content': prompt
-                    }]
-                )
-                clean_response = self.clean_response(response.choices[0].message.content)
-                results.append(clean_response)
-            except Exception as e:
-                results.append(f"Error communicating with LLM: {str(e)}")
+Answer (list the variables):"""
 
-        return results
+        try:
+            client = openai.Client(
+                base_url="https://api.groq.com/openai/v1",
+                api_key=st.secrets["GROQ_API_KEY"]
+            )
+            response = client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=[{
+                    'role': 'user',
+                    'content': prompt
+                }],
+                temperature=0.1  # Lower temperature for more consistent extraction
+            )
+            clean_response = self.clean_response(response.choices[0].message.content)
+            return [clean_response]
+        except Exception as e:
+            return [f"Error communicating with LLM: {str(e)}"]
 
     def clean_response(self, response_text):
         """Cleans the LLM response to extract a list of variables."""
@@ -197,6 +203,21 @@ def run_variable_extractor_app():
                 with st.spinner("Analyzing document..."):
                     results = st.session_state.sap_model.analyzeLLM(question)
                 st.session_state.chat_history.insert(0, (question, results))
+                
+                # Store extracted variables for table generation
+                if 'extracted_variables' not in st.session_state:
+                    st.session_state.extracted_variables = {}
+                
+                # Create a category key from the question
+                category_key = question.lower().replace('what are the ', '').replace('?', '').strip()
+                st.session_state.extracted_variables[category_key] = []
+                for result_group in results:
+                    if isinstance(result_group, list):
+                        st.session_state.extracted_variables[category_key].extend(result_group)
+                    else:
+                        if not result_group.startswith('Error'):
+                            st.session_state.extracted_variables[category_key].append(result_group)
+                
                 st.session_state.current_question = ""
 
         if st.session_state.get('chat_history'):
@@ -206,12 +227,22 @@ def run_variable_extractor_app():
                 st.write(f"**Your Question:** {latest_q}")
                 st.divider()
                 st.write("**Extracted Variables:**")
+                extracted_vars_list = []
                 for result_group in latest_a:
                     if isinstance(result_group, list):
                         for var in result_group:
                             st.markdown(f"- {var}")
+                            extracted_vars_list.append(var)
                     else:
                         st.write(result_group)
+                
+                # Add button to use these variables in table generation
+                if extracted_vars_list and st.button("📊 Use These Variables in Table Generator", key="use_vars_btn"):
+                    if 'variables_for_table' not in st.session_state:
+                        st.session_state.variables_for_table = []
+                    st.session_state.variables_for_table.extend(extracted_vars_list)
+                    st.success(f"✓ Added {len(extracted_vars_list)} variables to table generator!")
+                    st.info("Scroll down to the Table Generator section to create tables with these variables.")
 
 # ##############################################################################
 # --- APP 2: TABLE SHELL GENERATOR (Classes and Functions) ---
@@ -325,9 +356,20 @@ def load_rag_query_engine():
         st.info("Using user-uploaded file to build table index...")
         main_table_df = pd.read_csv(file_io, header=None)
     else:
-        file_path = "/Users/Sravya/Desktop/table_shells/mark - can you convert this into a markdown.csv"
-        if not os.path.exists(file_path):
-            st.error(f"Source file not found: '{file_path}'. Please upload a table CSV.")
+        # Try to find the CSV file in the current directory
+        possible_paths = [
+            "mark - can you convert this into a markdown.csv",
+            "./mark - can you convert this into a markdown.csv",
+            os.path.join(os.getcwd(), "mark - can you convert this into a markdown.csv")
+        ]
+        file_path = None
+        for path in possible_paths:
+            if os.path.exists(path):
+                file_path = path
+                break
+        
+        if not file_path:
+            st.warning("Default table template file not found. Please upload a table CSV file above.")
             return None, {}
         st.info("Using default pre-existing file to build table index...")
         main_table_df = pd.read_csv(file_path, header=None)
@@ -350,8 +392,20 @@ def load_rag_query_engine():
     index = VectorStoreIndex.from_documents(documents)
     st.session_state.index_ready = True
     
-    qa_template = PromptTemplate("Context: {context_str}\nQuestion: {query_str}\nAssistant: Find the table and return only its full markdown content.")
-    query_engine = index.as_query_engine(text_qa_template=qa_template)
+    qa_template = PromptTemplate(
+        """You are a clinical trial table shell expert. Based on the context, find and return the most relevant table.
+        
+        Context: {context_str}
+        
+        Question: {query_str}
+        
+        Return the complete table in markdown format with all columns and rows. Include table headers and all data rows."""
+    )
+    query_engine = index.as_query_engine(
+        text_qa_template=qa_template,
+        similarity_top_k=3,  # Retrieve top 3 most relevant tables
+        response_mode="compact"  # Compact response for better table extraction
+    )
     st.success("Table Shell Model is ready.")
     return query_engine, hierarchical_tables
 
@@ -417,6 +471,28 @@ def run_table_shell_app():
                              st.session_state.table_order.remove(category)
             st.rerun()
 
+    # Show extracted variables from Variable Extractor
+    if st.session_state.get('variables_for_table'):
+        with st.expander("🔗 Variables from Document Analysis", expanded=True):
+            st.success(f"**{len(st.session_state.variables_for_table)} variables** extracted from your document:")
+            for i, var in enumerate(st.session_state.variables_for_table, 1):
+                st.write(f"{i}. {var}")
+            
+            if st.button("📋 Create Table from These Variables"):
+                # Create a new table with extracted variables
+                table_name = f"Extracted Variables - {datetime.datetime.now().strftime('%H:%M:%S')}"
+                new_df = pd.DataFrame({
+                    'Variable': st.session_state.variables_for_table,
+                    'Group A (N=XX)': [''] * len(st.session_state.variables_for_table),
+                    'Group B (N=XX)': [''] * len(st.session_state.variables_for_table),
+                    'Total (N=XX)': [''] * len(st.session_state.variables_for_table)
+                })
+                st.session_state.generated_tables[table_name] = new_df
+                st.session_state.table_order.append(table_name)
+                st.success(f"✓ Created table '{table_name}' with {len(st.session_state.variables_for_table)} variables!")
+                st.session_state.variables_for_table = []  # Clear after use
+                st.rerun()
+    
     with st.expander("Add a New Custom Table"):
         new_category_name = st.text_input("Enter a name for the new table:", key="new_table_name")
         
@@ -486,9 +562,20 @@ def run_table_shell_app():
 
 def main():
     st.title("TableGen AI: Document Extractor & Table Generator")
+    
+    # Initialize session state for variable storage
+    if 'extracted_variables' not in st.session_state:
+        st.session_state.extracted_variables = {}
+    if 'variables_for_table' not in st.session_state:
+        st.session_state.variables_for_table = []
 
     with st.sidebar:
         st.header("Controls & History")
+        
+        # Show connection status
+        if st.session_state.get('variables_for_table'):
+            st.success(f"✅ {len(st.session_state.variables_for_table)} variables ready for table generation")
+        
         st.info("This panel contains the conversation history for the **Variable Extractor**.")
         st.subheader("🗣️ Conversation History")
         if st.button("Clear History"):

@@ -1,2 +1,5 @@
 # Streamlit secrets
-/.streamlit/
+/.streamlit/venv/
+
+# Streamlit secrets - NEVER commit API keys
+.streamlit/secrets.toml
