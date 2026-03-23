@@ -10,6 +10,7 @@ import io
 import os
 import datetime
 import tempfile
+import time
 
 st.set_page_config(layout="wide")
 
@@ -94,8 +95,9 @@ class SAPEmbedsWeb:
     def analyzeLLM(self, query):
         """Sends the retrieved chunk and query to the LLM for analysis."""
         best_chunks = self.retrieve(query, top=1)
+        retrieval_hit = bool(best_chunks)
         if not best_chunks:
-            return ["Could not find a relevant chunk in the document for your query."]
+            return ["Could not find a relevant chunk in the document for your query."], retrieval_hit
 
         results = []
         for chunk in best_chunks:
@@ -127,7 +129,7 @@ class SAPEmbedsWeb:
             except Exception as e:
                 results.append(f"Error communicating with LLM: {str(e)}")
 
-        return results
+        return results, retrieval_hit
 
     def clean_response(self, response_text):
         """Cleans the LLM response to extract a list of variables."""
@@ -194,8 +196,16 @@ def run_variable_extractor_app():
         if st.button("Ask Question", type="primary") or st.session_state.get('query_submitted'):
             if question:
                 st.session_state.query_submitted = False
+                start_time = time.perf_counter()
                 with st.spinner("Analyzing document..."):
-                    results = st.session_state.sap_model.analyzeLLM(question)
+                    results, retrieval_hit = st.session_state.sap_model.analyzeLLM(question)
+                latency_ms = (time.perf_counter() - start_time) * 1000
+                metric_id = record_rag_metric(
+                    model_name="VariableExtractor",
+                    retrieval_hit=retrieval_hit,
+                    latency_ms=latency_ms
+                )
+                st.session_state.last_metric_id = metric_id
                 st.session_state.chat_history.insert(0, (question, results))
                 st.session_state.current_question = ""
 
@@ -212,6 +222,19 @@ def run_variable_extractor_app():
                             st.markdown(f"- {var}")
                     else:
                         st.write(result_group)
+                if st.session_state.get("last_metric_id"):
+                    st.divider()
+                    st.caption("Rate accuracy for the latest answer")
+                    accuracy_value = st.slider(
+                        "Accuracy (0-100)",
+                        min_value=0,
+                        max_value=100,
+                        value=80,
+                        key="accuracy_slider_variable"
+                    )
+                    if st.button("Submit Accuracy Rating", key="submit_accuracy_variable"):
+                        set_metric_accuracy(st.session_state.last_metric_id, accuracy_value)
+                        st.success("Accuracy rating saved.")
 
 # ##############################################################################
 # --- APP 2: TABLE SHELL GENERATOR (Classes and Functions) ---
@@ -403,8 +426,16 @@ def run_table_shell_app():
             with st.spinner("Querying model and updating tables..."):
                 for category in selected_sub_categories:
                     if category not in st.session_state.generated_tables:
+                        start_time = time.perf_counter()
                         response = query_engine.query(f"Show me the table shell for {category}")
+                        latency_ms = (time.perf_counter() - start_time) * 1000
                         df = markdown_to_dataframe(str(response))
+                        metric_id = record_rag_metric(
+                            model_name="TableGenerator",
+                            retrieval_hit=not df.empty,
+                            latency_ms=latency_ms
+                        )
+                        st.session_state.last_metric_id = metric_id
                         if not df.empty:
                             st.session_state.generated_tables[category] = df
                             if category not in st.session_state.table_order:
@@ -480,6 +511,87 @@ def run_table_shell_app():
         
         st.download_button("⬇️ Download All Tables as CSV", output.getvalue().encode('utf-8'), "custom_table_shells.csv", "text/csv")
 
+    if st.session_state.get("last_metric_id"):
+        st.caption("Rate accuracy for the latest table generation")
+        accuracy_value = st.slider(
+            "Accuracy (0-100)",
+            min_value=0,
+            max_value=100,
+            value=80,
+            key="accuracy_slider_table"
+        )
+        if st.button("Submit Accuracy Rating", key="submit_accuracy_table"):
+            set_metric_accuracy(st.session_state.last_metric_id, accuracy_value)
+            st.success("Accuracy rating saved.")
+
+# ##############################################################################
+# --- METRICS UTILITIES ---
+# ##############################################################################
+
+def init_metrics_state():
+    if "rag_metrics" not in st.session_state:
+        st.session_state.rag_metrics = []
+    if "rag_metrics_seq" not in st.session_state:
+        st.session_state.rag_metrics_seq = 0
+
+def record_rag_metric(model_name: str, retrieval_hit: bool, latency_ms: float, accuracy: float | None = None) -> int:
+    init_metrics_state()
+    st.session_state.rag_metrics_seq += 1
+    entry = {
+        "id": st.session_state.rag_metrics_seq,
+        "timestamp": datetime.datetime.utcnow().isoformat(),
+        "model": model_name,
+        "retrieval_hit": int(bool(retrieval_hit)),
+        "latency_ms": float(latency_ms),
+    }
+    if accuracy is not None:
+        entry["accuracy"] = float(accuracy)
+    st.session_state.rag_metrics.append(entry)
+    return entry["id"]
+
+def set_metric_accuracy(metric_id: int, accuracy: float):
+    init_metrics_state()
+    for entry in st.session_state.rag_metrics:
+        if entry.get("id") == metric_id:
+            entry["accuracy"] = float(accuracy)
+            break
+
+def render_metrics_dashboard():
+    init_metrics_state()
+    st.header("RAG Metrics")
+    if not st.session_state.rag_metrics:
+        st.info("No metrics recorded yet. Use the app to generate results.")
+        return
+
+    df = pd.DataFrame(st.session_state.rag_metrics)
+    df["timestamp"] = pd.to_datetime(df["timestamp"], errors="coerce")
+    df = df.dropna(subset=["timestamp"])
+
+    if df.empty:
+        st.info("Metrics are empty after parsing timestamps.")
+        return
+
+    models = sorted(df["model"].unique())
+    selected_models = st.multiselect("Models", options=models, default=models)
+    if not selected_models:
+        return
+
+    df = df[df["model"].isin(selected_models)].sort_values("timestamp")
+
+    st.subheader("Retrieval Hit Rate")
+    hit_df = df.pivot_table(index="timestamp", columns="model", values="retrieval_hit", aggfunc="mean")
+    st.line_chart(hit_df, height=220)
+
+    if "accuracy" in df.columns:
+        st.subheader("Accuracy (User Rating)")
+        acc_df = df.pivot_table(index="timestamp", columns="model", values="accuracy", aggfunc="mean")
+        if not acc_df.empty:
+            st.line_chart(acc_df, height=220)
+
+    st.subheader("Efficiency (Latency ms)")
+    latency_df = df.pivot_table(index="timestamp", columns="model", values="latency_ms", aggfunc="mean")
+    st.line_chart(latency_df, height=220)
+
 # ##############################################################################
 # --- MAIN STREAMLIT APPLICATION ---
 # ##############################################################################
@@ -505,6 +617,8 @@ def main():
     run_variable_extractor_app()
     st.divider()
     run_table_shell_app()
+    st.divider()
+    render_metrics_dashboard()
 
 if __name__ == "__main__":
     main()
